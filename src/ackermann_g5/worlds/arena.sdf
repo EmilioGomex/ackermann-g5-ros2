@@ -1,0 +1,1465 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sdf version="1.9">
+  <world name="g5_arena">
+    <physics name="default" type="ignored">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+    </physics>
+    <plugin filename="gz-sim-physics-system" name="gz::sim::systems::Physics" />
+    <plugin filename="gz-sim-user-commands-system" name="gz::sim::systems::UserCommands" />
+    <plugin filename="gz-sim-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster" />
+    <plugin filename="gz-sim-sensors-system" name="gz::sim::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+    <light name="sun" type="directional">
+      <pose>0 0 5 0 0 0</pose>
+      <direction>-0.4 0.2 -1</direction>
+      <diffuse>0.9 0.9 0.9 1</diffuse>
+    </light>
+    <gui>
+      <camera name="camera">
+        <pose>4 -4 4 0 0.65 2.25</pose>
+      </camera>
+    </gui>
+    <model name="floor">
+      <static>true</static>
+      <pose>0 0.75 -0.05 0 0 0</pose>
+      <link name="body">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>5 5 0.1</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>5 5 0.1</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.46 0.49 0.52 1</ambient>
+            <diffuse>0.46 0.49 0.52 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="north">
+      <static>true</static>
+      <pose>0 3.0 0.20 0 0 0</pose>
+      <link name="body">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>4.6 0.10 0.40</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>4.6 0.10 0.40</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.22 0.37 0.56 1</ambient>
+            <diffuse>0.22 0.37 0.56 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="south">
+      <static>true</static>
+      <pose>0 -1.5 0.20 0 0 0</pose>
+      <link name="body">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>4.6 0.10 0.40</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>4.6 0.10 0.40</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.22 0.37 0.56 1</ambient>
+            <diffuse>0.22 0.37 0.56 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="east">
+      <static>true</static>
+      <pose>2.25 0.75 0.20 0 0 0</pose>
+      <link name="body">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.10 4.6 0.40</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.10 4.6 0.40</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.22 0.37 0.56 1</ambient>
+            <diffuse>0.22 0.37 0.56 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="west">
+      <static>true</static>
+      <pose>-2.25 0.75 0.20 0 0 0</pose>
+      <link name="body">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.10 4.6 0.40</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.10 4.6 0.40</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.22 0.37 0.56 1</ambient>
+            <diffuse>0.22 0.37 0.56 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="obstacle">
+      <static>true</static>
+      <pose>1.50 1.55 0.15 0 0 0</pose>
+      <link name="body">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.45 0.75 0.30</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.45 0.75 0.30</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.22 0.37 0.56 1</ambient>
+            <diffuse>0.22 0.37 0.56 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_0">
+      <static>true</static>
+      <pose>0.00000 0.00000 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_1">
+      <static>true</static>
+      <pose>0.06537 0.00285 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_2">
+      <static>true</static>
+      <pose>0.13024 0.01139 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_3">
+      <static>true</static>
+      <pose>0.19411 0.02556 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_4">
+      <static>true</static>
+      <pose>0.25652 0.04523 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_5">
+      <static>true</static>
+      <pose>0.31696 0.07027 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_6">
+      <static>true</static>
+      <pose>0.37500 0.10048 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_7">
+      <static>true</static>
+      <pose>0.43018 0.13564 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_8">
+      <static>true</static>
+      <pose>0.48209 0.17547 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_9">
+      <static>true</static>
+      <pose>0.53033 0.21967 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_10">
+      <static>true</static>
+      <pose>0.57453 0.26791 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_11">
+      <static>true</static>
+      <pose>0.61436 0.31982 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_12">
+      <static>true</static>
+      <pose>0.64952 0.37500 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_13">
+      <static>true</static>
+      <pose>0.67973 0.43304 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_14">
+      <static>true</static>
+      <pose>0.70477 0.49348 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_15">
+      <static>true</static>
+      <pose>0.72444 0.55589 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_16">
+      <static>true</static>
+      <pose>0.73861 0.61976 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_17">
+      <static>true</static>
+      <pose>0.74715 0.68463 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_18">
+      <static>true</static>
+      <pose>0.75000 0.75000 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_19">
+      <static>true</static>
+      <pose>0.74715 0.81537 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_20">
+      <static>true</static>
+      <pose>0.73861 0.88024 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_21">
+      <static>true</static>
+      <pose>0.72444 0.94411 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_22">
+      <static>true</static>
+      <pose>0.70477 1.00652 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_23">
+      <static>true</static>
+      <pose>0.67973 1.06696 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_24">
+      <static>true</static>
+      <pose>0.64952 1.12500 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_25">
+      <static>true</static>
+      <pose>0.61436 1.18018 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_26">
+      <static>true</static>
+      <pose>0.57453 1.23209 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_27">
+      <static>true</static>
+      <pose>0.53033 1.28033 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_28">
+      <static>true</static>
+      <pose>0.48209 1.32453 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_29">
+      <static>true</static>
+      <pose>0.43018 1.36436 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_30">
+      <static>true</static>
+      <pose>0.37500 1.39952 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_31">
+      <static>true</static>
+      <pose>0.31696 1.42973 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_32">
+      <static>true</static>
+      <pose>0.25652 1.45477 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_33">
+      <static>true</static>
+      <pose>0.19411 1.47444 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_34">
+      <static>true</static>
+      <pose>0.13024 1.48861 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_35">
+      <static>true</static>
+      <pose>0.06537 1.49715 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_36">
+      <static>true</static>
+      <pose>0.00000 1.50000 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_37">
+      <static>true</static>
+      <pose>-0.06537 1.49715 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_38">
+      <static>true</static>
+      <pose>-0.13024 1.48861 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_39">
+      <static>true</static>
+      <pose>-0.19411 1.47444 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_40">
+      <static>true</static>
+      <pose>-0.25652 1.45477 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_41">
+      <static>true</static>
+      <pose>-0.31696 1.42973 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_42">
+      <static>true</static>
+      <pose>-0.37500 1.39952 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_43">
+      <static>true</static>
+      <pose>-0.43018 1.36436 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_44">
+      <static>true</static>
+      <pose>-0.48209 1.32453 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_45">
+      <static>true</static>
+      <pose>-0.53033 1.28033 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_46">
+      <static>true</static>
+      <pose>-0.57453 1.23209 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_47">
+      <static>true</static>
+      <pose>-0.61436 1.18018 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_48">
+      <static>true</static>
+      <pose>-0.64952 1.12500 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_49">
+      <static>true</static>
+      <pose>-0.67973 1.06696 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_50">
+      <static>true</static>
+      <pose>-0.70477 1.00652 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_51">
+      <static>true</static>
+      <pose>-0.72444 0.94411 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_52">
+      <static>true</static>
+      <pose>-0.73861 0.88024 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_53">
+      <static>true</static>
+      <pose>-0.74715 0.81537 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_54">
+      <static>true</static>
+      <pose>-0.75000 0.75000 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_55">
+      <static>true</static>
+      <pose>-0.74715 0.68463 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_56">
+      <static>true</static>
+      <pose>-0.73861 0.61976 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_57">
+      <static>true</static>
+      <pose>-0.72444 0.55589 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_58">
+      <static>true</static>
+      <pose>-0.70477 0.49348 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_59">
+      <static>true</static>
+      <pose>-0.67973 0.43304 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_60">
+      <static>true</static>
+      <pose>-0.64952 0.37500 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_61">
+      <static>true</static>
+      <pose>-0.61436 0.31982 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_62">
+      <static>true</static>
+      <pose>-0.57453 0.26791 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_63">
+      <static>true</static>
+      <pose>-0.53033 0.21967 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_64">
+      <static>true</static>
+      <pose>-0.48209 0.17547 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_65">
+      <static>true</static>
+      <pose>-0.43018 0.13564 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_66">
+      <static>true</static>
+      <pose>-0.37500 0.10048 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_67">
+      <static>true</static>
+      <pose>-0.31696 0.07027 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_68">
+      <static>true</static>
+      <pose>-0.25652 0.04523 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_69">
+      <static>true</static>
+      <pose>-0.19411 0.02556 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_70">
+      <static>true</static>
+      <pose>-0.13024 0.01139 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="reference_71">
+      <static>true</static>
+      <pose>-0.06537 0.00285 0.0005 0 0 0</pose>
+      <link name="marker">
+        <visual name="dot">
+          <geometry>
+            <cylinder>
+              <radius>0.010</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.8 0.25 1</ambient>
+            <diffuse>0.1 0.8 0.25 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+  </world>
+</sdf>
