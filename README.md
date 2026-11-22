@@ -1,4 +1,4 @@
-# Robot Ackermann · Grupo 5
+# Robot Ackermann - Grupo 5
 
 El robot Ackermann del Grupo 5 sigue el contorno de un paraguas en Gazebo
 Harmonic con ROS 2 Jazzy. El recorrido es cerrado, con dos tramos largos y rectos debajo de la cúpula.
