@@ -1,132 +1,64 @@
-﻿# Proyecto 1 · Robot Ackermann G5
+# Robot Ackermann · Grupo 5
 
-Simulación del modelo de Fusion 360 con ROS 2 Jazzy y Gazebo Harmonic.
-El controlador sigue una vuelta antihoraria de radio 0,75 m con *Pure Pursuit*
-y odometría de ruedas. El anillo verde marca la referencia en Gazebo.
+Hicimos el robot en Fusion 360 y lo probamos con ROS 2 Jazzy y Gazebo
+Harmonic en una VM con Linux Mint. El robot da una vuelta de 0,75 m de radio
+con Pure Pursuit. Los puntos verdes en Gazebo marcan el recorrido.
 
-## Instalar y compilar
+## Instalación
 
-Usar Ubuntu 24.04, nativo o en WSL 2 con WSLg para abrir Gazebo y RViz.
-En Windows, si WSL no está instalado, ejecutar en PowerShell como
-administrador `wsl --install -d Ubuntu-24.04`, reiniciar si Windows lo solicita
-y abrir Ubuntu. Configurar el repositorio APT de ROS y completar la
-[instalación de ROS 2 Jazzy](https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html).
-
-En Ubuntu:
+Si ya tienes Jazzy instalado, revisa las dependencias. Para una instalación
+desde cero en Ubuntu 24.04, sigue la [guía de ROS 2 Jazzy](https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html).
 
 ```bash
 sudo apt update
-sudo apt install ros-jazzy-desktop ros-jazzy-ros-gz ros-jazzy-xacro \
-  ros-jazzy-slam-toolbox ros-jazzy-nav2-map-server python3-colcon-common-extensions
-source /opt/ros/jazzy/setup.bash
+sudo apt install ros-jazzy-ros-gz ros-jazzy-xacro ros-jazzy-robot-state-publisher \
+  python3-colcon-common-extensions
 ```
 
-Abrir una terminal en la carpeta que contiene este README y `src/`.
-Si el proyecto está en la ubicación original de Windows, esa carpeta es
-`/mnt/d/Robots/07_Proyectos/Proyecto1_G5` dentro de WSL. Estos comandos usan
-el sistema de archivos de Ubuntu para compilar:
+## Compilar y correr
+
+Desde la carpeta del repositorio, donde están este README y `src/`:
 
 ```bash
-mkdir -p ~/g5_ws/src
-cp -r src/ackermann_g5 ~/g5_ws/src/
-cd ~/g5_ws
+source /opt/ros/jazzy/setup.bash
 colcon build --packages-select ackermann_g5
 source install/setup.bash
 ros2 launch ackermann_g5 simulation.launch.py
 ```
 
-El robot espera odometría y transcurren cinco segundos simulados antes de
-arrancar. Al completar una vuelta, se detiene y el nodo imprime RMSE radial,
-error radial máximo y distancia al punto inicial derivados de la odometría.
-Para grabar con más tiempo de preparación, usar `start_delay:=15.0`.
-Para ejecutar solo el servidor de Gazebo, usar `gui:=false`.
-Para arrancar sin el controlador automático, usar `controller:=false`.
-
-## Comprobar y registrar la simulación
-
-Desde otra terminal:
+Para grabar, inicia la simulación con 30 segundos de espera. La cuenta
+empieza cuando aparece `Odometry ready`.
 
 ```bash
-source /opt/ros/jazzy/setup.bash
-source ~/g5_ws/install/setup.bash
-ros2 topic echo /g5/odom --once
-ros2 run tf2_ros tf2_echo odom base_link
+ros2 launch ackermann_g5 simulation.launch.py start_delay:=30.0
 ```
 
-Para registrar datos antes del arranque, lanzar con `start_delay:=15.0` y
-ejecutar en la segunda terminal:
+El robot se detiene después de una vuelta. La línea `Lap complete` muestra
+el RMSE radial, el error máximo y la distancia al punto de partida, todos
+calculados con la odometría de ruedas. Para ver la odometría en otra terminal,
+carga Jazzy y ejecuta `ros2 topic echo /g5/odom --once`.
+
+## LiDAR y SLAM
+
+El modo de mapeo usa un LiDAR 2D virtual y SLAM Toolbox. Instala estos paquetes
+si vas a probarlo:
 
 ```bash
-ros2 bag record -o g5_circle /clock /g5/odom /g5/cmd_vel /g5/joint_states
+sudo apt install ros-jazzy-slam-toolbox ros-jazzy-nav2-map-server ros-jazzy-rviz2
+ros2 launch ackermann_g5 simulation.launch.py slam:=true
 ```
 
-Detener la grabación con Ctrl+C después de `Lap complete`. Para el video,
-encuadrar el anillo verde desde arriba y grabar desde que empieza a moverse
-hasta que se detiene. El recorrido nominal mide 4,71 m y dura alrededor de
-30 s más la desaceleración y la espera inicial. Las métricas del log son
-estimaciones por odometría. Para medir el error físico de la simulación,
-usar pose real del modelo en Gazebo y llevarla al mismo marco que la referencia.
-
-## LiDAR 2D y SLAM
-
-Detener el lanzamiento anterior antes de iniciar esta variante:
-
-```bash
-ros2 launch ackermann_g5 simulation.launch.py slam:=true start_delay:=10.0
-```
-
-En otra terminal con el entorno cargado:
-
-```bash
-ros2 topic echo /g5/scan --once --field header --qos-reliability best_effort
-ros2 run tf2_ros tf2_echo map lidar_link
-rviz2 --ros-args -p use_sim_time:=true
-```
-
-En RViz, elegir `map` como *Fixed Frame*, agregar *Map* con el tópico
-`/map` y *LaserScan* con `/g5/scan` y fiabilidad *Best Effort*. Con el
-mapa visible, exportarlo desde otra terminal:
+En otra terminal con Jazzy cargado, abre RViz con
+`rviz2 --ros-args -p use_sim_time:=true`. Selecciona `map` como marco fijo y
+agrega `/map` y `/g5/scan`. Para el escaneo usa fiabilidad *Best Effort*.
+Para guardar el mapa:
 
 ```bash
 ros2 run nav2_map_server map_saver_cli -f g5_map --ros-args -p use_sim_time:=true
 ```
 
-El Xacro agrega un LiDAR virtual a 90 mm de altura respecto del origen CAD
-del chasis, por encima de la bandera. Para el requisito de cuatro
-integrantes, incorporar también el sensor al ensamblaje de Fusion y actualizar
-el plano correspondiente.
+## Archivos
 
-## Modelo y control
-
-| Parámetro | Valor |
-|---|---:|
-| Distancia entre ejes | 80 mm |
-| Vía trasera entre centros de rueda | 115 mm |
-| Vía entre pivotes de dirección | 100 mm |
-| Vía delantera entre centros de rueda en recta | 125 mm |
-| Radio de rueda | 25 mm |
-| Giro máximo de cada articulación delantera | ±35° |
-| Velocidad nominal del controlador | 0,16 m/s |
-| Radio de referencia | 0,75 m |
-
-El origen de `base_link` se desplazó longitudinalmente hasta el punto medio
-del eje trasero para concentrar la referencia cinemática en ese eje.
-Se mantienen las mallas originales y se usan colisiones cilíndricas para las
-ruedas. La tracción se aplica al eje trasero.
-
-En el modelo bicicleta, ẋ = v cos θ, ẏ = v sin θ y θ̇ = v tan(δ)/L.
-Para un punto objetivo (xₜ, yₜ) expresado en el marco del vehículo, el
-controlador usa κ = 2yₜ/(xₜ² + yₜ²) y envía ω = vκ al plugin de Gazebo.
-El plugin coordina las dos articulaciones de dirección y asigna velocidades
-distintas a las ruedas traseras. El nodo espera datos de odometría y envía
-velocidad cero si deja de recibirlos durante más de 0,5 s de tiempo simulado.
-
-## Archivos principales
-
-- `src/ackermann_g5/urdf/` y `meshes/` contienen el modelo del G5.
-- `src/ackermann_g5/scripts/follow_circle.py` contiene el controlador ROS 2.
-- `src/ackermann_g5/launch/simulation.launch.py` inicia Gazebo, el puente, el controlador y opcionalmente SLAM.
-- `src/ackermann_g5/worlds/arena.sdf` contiene la arena y la referencia visual.
-
-Implementación basada en la [documentación de Gazebo Harmonic](https://gazebosim.org/docs/harmonic/)
-y el [sistema AckermannSteering de Gazebo Sim 8](https://github.com/gazebosim/gz-sim/tree/gz-sim8/src/systems/ackermann_steering).
+- `src/ackermann_g5/scripts/follow_circle.py` contiene el controlador.
+- `src/ackermann_g5/urdf/` contiene el modelo y los parámetros del robot.
+- `src/ackermann_g5/worlds/arena.sdf` contiene la pista.

@@ -11,7 +11,9 @@
       <geometry>
         <mesh filename="file://$(arg mesh_dir)/base_link.stl" scale="0.001 0.001 0.001" />
       </geometry>
-      <material name="silver" />
+      <material name="orange">
+        <color rgba="0.95 0.25 0.025 1" />
+      </material>
     </visual>
     <collision>
       <origin xyz="0.04 0 0" rpy="0 0 0" />
@@ -31,7 +33,9 @@
       <geometry>
         <mesh filename="file://$(arg mesh_dir)/b_wheel_l_1.stl" scale="0.001 0.001 0.001" />
       </geometry>
-      <material name="silver" />
+      <material name="rubber">
+        <color rgba="0.075 0.085 0.10 1" />
+      </material>
     </visual>
     <collision>
       <origin xyz="0 0.0075 0" rpy="1.57079632679 0 0" />
@@ -51,7 +55,9 @@
       <geometry>
         <mesh filename="file://$(arg mesh_dir)/b_wheel_r_1.stl" scale="0.001 0.001 0.001" />
       </geometry>
-      <material name="silver" />
+      <material name="rubber">
+        <color rgba="0.075 0.085 0.10 1" />
+      </material>
     </visual>
     <collision>
       <origin xyz="0 -0.0075 0" rpy="1.57079632679 0 0" />
@@ -71,7 +77,9 @@
       <geometry>
         <mesh filename="file://$(arg mesh_dir)/Flag_1.stl" scale="0.001 0.001 0.001" />
       </geometry>
-      <material name="silver" />
+      <material name="yellow">
+        <color rgba="0.95 0.78 0.035 1" />
+      </material>
     </visual>
   </link>
   <link name="f_steer_l_1">
@@ -85,7 +93,9 @@
       <geometry>
         <mesh filename="file://$(arg mesh_dir)/f_steer_l_1.stl" scale="0.001 0.001 0.001" />
       </geometry>
-      <material name="silver" />
+      <material name="steel">
+        <color rgba="0.42 0.45 0.50 1" />
+      </material>
     </visual>
   </link>
   <link name="f_wheel_r_1">
@@ -99,7 +109,9 @@
       <geometry>
         <mesh filename="file://$(arg mesh_dir)/f_wheel_r_1.stl" scale="0.001 0.001 0.001" />
       </geometry>
-      <material name="silver" />
+      <material name="rubber">
+        <color rgba="0.075 0.085 0.10 1" />
+      </material>
     </visual>
     <collision>
       <origin xyz="0 -0.0075 0" rpy="1.57079632679 0 0" />
@@ -119,7 +131,9 @@
       <geometry>
         <mesh filename="file://$(arg mesh_dir)/f_steer_r_1.stl" scale="0.001 0.001 0.001" />
       </geometry>
-      <material name="silver" />
+      <material name="steel">
+        <color rgba="0.42 0.45 0.50 1" />
+      </material>
     </visual>
   </link>
   <link name="f_wheel_l_1">
@@ -133,7 +147,9 @@
       <geometry>
         <mesh filename="file://$(arg mesh_dir)/f_wheel_l_1.stl" scale="0.001 0.001 0.001" />
       </geometry>
-      <material name="silver" />
+      <material name="rubber">
+        <color rgba="0.075 0.085 0.10 1" />
+      </material>
     </visual>
     <collision>
       <origin xyz="0 0.0075 0" rpy="1.57079632679 0 0" />
@@ -187,9 +203,6 @@
   </joint>
   <xacro:arg name="mesh_dir" default="$(find ackermann_g5)/meshes" />
   <xacro:arg name="lidar" default="false" />
-  <material name="silver">
-    <color rgba="0.7 0.7 0.7 1" />
-  </material>
   <gazebo reference="b_wheel_l_1">
     <mu1>1.0</mu1>
     <mu2>1.0</mu2>
