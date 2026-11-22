@@ -13,6 +13,7 @@ from rclpy.node import Node
 from rclpy.qos import qos_profile_sensor_data
 
 LOOKAHEAD = 0.22
+TURN_PREVIEW = 0.40
 MAX_CURVATURE = 4.2
 
 
@@ -54,9 +55,18 @@ class PathFollower:
         tx, ty = self.point_at(self.progress + LOOKAHEAD)
         dx, dy = tx - x, ty - y
         lateral = -math.sin(yaw) * dx + math.cos(yaw) * dy
-        curvature = 2.0 * lateral / max(dx * dx + dy * dy, 1e-8)
-        curvature = min(MAX_CURVATURE, max(-MAX_CURVATURE, curvature))
-        speed = min(0.18 / (1.0 + 0.28 * abs(curvature)), max(0.045, remaining))
+        pursuit = 2.0 * lateral / max(dx * dx + dy * dy, 1e-8)
+        curvature = min(MAX_CURVATURE, max(-MAX_CURVATURE, 1.25 * pursuit))
+
+        px, py = self.point_at(self.progress + TURN_PREVIEW)
+        qx, qy = self.point_at(self.progress)
+        initial_heading = math.atan2(ty - qy, tx - qx)
+        upcoming_heading = math.atan2(py - ty, px - tx)
+        turn = upcoming_heading - initial_heading
+        preview = abs(math.atan2(math.sin(turn), math.cos(turn))) / (TURN_PREVIEW / 2.0)
+        turn_speed = 0.18 / (1.0 + 0.40 * max(abs(curvature), preview))
+        recovery_speed = max(0.06, 0.18 - 0.6 * error)
+        speed = min(turn_speed, recovery_speed, max(0.045, remaining))
         return speed, speed * curvature, error, goal_error
 
 
@@ -75,6 +85,7 @@ class RobotController(Node):
             self.follower = PathFollower([(float(x), float(y)) for x, y in csv.reader(file)])
         self.pose = None
         self.last_received = None
+        self.yaw_rate = 0.0
         self.ready_at = None
         self.samples = 0
         self.error_sq_sum = 0.0
@@ -87,6 +98,7 @@ class RobotController(Node):
         yaw = math.atan2(2.0 * (q.w * q.z + q.x * q.y),
                          1.0 - 2.0 * (q.y * q.y + q.z * q.z))
         self.pose = (pose.position.x, pose.position.y, yaw)
+        self.yaw_rate = message.twist.twist.angular.z
         self.last_received = self.get_clock().now()
 
     def update(self):
@@ -109,7 +121,12 @@ class RobotController(Node):
         speed, turn, error, goal_error = self.follower.update(x, y, yaw)
         if error > 0.30:
             self.finished = True
-            self.get_logger().error(f'Umbrella stopped. Path deviation: {error:.3f} m.')
+            self.get_logger().error(
+                f'Umbrella stopped. Deviation {error:.3f} m at '
+                f'{self.follower.progress:.2f} m along the route, '
+                f'pose ({x:.2f}, {y:.2f}, {yaw:.2f}), '
+                f'yaw rate {self.yaw_rate:.2f} rad/s, requested {turn:.2f} rad/s.'
+            )
             self.publisher.publish(cmd)
             return
         self.samples += 1
