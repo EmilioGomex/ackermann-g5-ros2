@@ -39,6 +39,11 @@ con la pose del robot en Gazebo. El nodo se detiene si se desvía más
 de 0,30 m. La odometría de ruedas sigue disponible en `/g5/odom`
 para compararla con `/g5/ground_truth`.
 
+## Resultado
+
+En Gazebo completamos la vuelta con 4,0 mm de RMSE, 9,7 mm de error máximo
+y 34,7 mm de distancia al punto final. Las medidas usan la pose de Gazebo.
+
 ## Archivos
 
 - `src/ackermann_g5/scripts/follow_path.py` contiene el controlador.

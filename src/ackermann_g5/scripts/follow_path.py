@@ -85,7 +85,6 @@ class RobotController(Node):
             self.follower = PathFollower([(float(x), float(y)) for x, y in csv.reader(file)])
         self.pose = None
         self.last_received = None
-        self.yaw_rate = 0.0
         self.ready_at = None
         self.samples = 0
         self.error_sq_sum = 0.0
@@ -98,7 +97,6 @@ class RobotController(Node):
         yaw = math.atan2(2.0 * (q.w * q.z + q.x * q.y),
                          1.0 - 2.0 * (q.y * q.y + q.z * q.z))
         self.pose = (pose.position.x, pose.position.y, yaw)
-        self.yaw_rate = message.twist.twist.angular.z
         self.last_received = self.get_clock().now()
 
     def update(self):
@@ -121,12 +119,7 @@ class RobotController(Node):
         speed, turn, error, goal_error = self.follower.update(x, y, yaw)
         if error > 0.30:
             self.finished = True
-            self.get_logger().error(
-                f'Umbrella stopped. Deviation {error:.3f} m at '
-                f'{self.follower.progress:.2f} m along the route, '
-                f'pose ({x:.2f}, {y:.2f}, {yaw:.2f}), '
-                f'yaw rate {self.yaw_rate:.2f} rad/s, requested {turn:.2f} rad/s.'
-            )
+            self.get_logger().error(f'Umbrella stopped. Path deviation: {error:.3f} m.')
             self.publisher.publish(cmd)
             return
         self.samples += 1
