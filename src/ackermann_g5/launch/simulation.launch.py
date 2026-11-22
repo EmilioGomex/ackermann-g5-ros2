@@ -39,6 +39,7 @@ def setup(context):
         '/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock',
         '/g5/cmd_vel@geometry_msgs/msg/Twist]gz.msgs.Twist',
         '/g5/odom@nav_msgs/msg/Odometry[gz.msgs.Odometry',
+        '/g5/ground_truth@nav_msgs/msg/Odometry[gz.msgs.Odometry',
         '/g5/joint_states@sensor_msgs/msg/JointState[gz.msgs.Model',
         '/g5/tf@tf2_msgs/msg/TFMessage[gz.msgs.Pose_V',
     ]

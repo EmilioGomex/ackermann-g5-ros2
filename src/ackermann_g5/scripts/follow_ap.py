@@ -67,13 +67,12 @@ class RobotController(Node):
         self.delay = max(0.0, self.get_parameter('start_delay').value)
         self.publisher = self.create_publisher(Twist, '/g5/cmd_vel', 10)
         self.subscription = self.create_subscription(
-            Odometry, '/g5/odom', self.on_odom, qos_profile_sensor_data
+            Odometry, '/g5/ground_truth', self.on_pose, qos_profile_sensor_data
         )
         self.timer = self.create_timer(0.05, self.update)
         route_file = Path(get_package_share_directory('ackermann_g5')) / 'config' / 'ap_path.csv'
         with route_file.open(newline='') as file:
-            self.route = [(float(x), float(y)) for x, y in csv.reader(file)]
-        self.follower = None
+            self.follower = PathFollower([(float(x), float(y)) for x, y in csv.reader(file)])
         self.pose = None
         self.last_received = None
         self.ready_at = None
@@ -82,7 +81,7 @@ class RobotController(Node):
         self.max_error = 0.0
         self.finished = False
 
-    def on_odom(self, message):
+    def on_pose(self, message):
         pose = message.pose.pose
         q = pose.orientation
         yaw = math.atan2(2.0 * (q.w * q.z + q.x * q.y),
@@ -101,23 +100,18 @@ class RobotController(Node):
             return
         if self.ready_at is None:
             self.ready_at = now
-            self.get_logger().info(f'Odometry ready. Starting in {self.delay:.1f} s.')
+            self.get_logger().info(f'Gazebo pose ready. Starting in {self.delay:.1f} s.')
         if (now - self.ready_at).nanoseconds < self.delay * 1e9:
             self.publisher.publish(cmd)
             return
 
         x, y, yaw = self.pose
-        if self.follower is None:
-            ax, ay = self.route[0]
-            bx, by = self.route[1]
-            rotation = yaw - math.atan2(by - ay, bx - ax)
-            c, s = math.cos(rotation), math.sin(rotation)
-            self.follower = PathFollower([
-                (x + c * (px - ax) - s * (py - ay),
-                 y + s * (px - ax) + c * (py - ay))
-                for px, py in self.route
-            ])
         speed, turn, error, goal_error = self.follower.update(x, y, yaw)
+        if error > 0.30:
+            self.finished = True
+            self.get_logger().error(f'AP stopped. Path deviation: {error:.3f} m.')
+            self.publisher.publish(cmd)
+            return
         self.samples += 1
         self.error_sq_sum += error * error
         self.max_error = max(self.max_error, error)
@@ -126,7 +120,7 @@ class RobotController(Node):
             self.finished = True
             rms = math.sqrt(self.error_sq_sum / self.samples)
             self.get_logger().info(
-                f'AP complete. Odometry tracking RMSE {rms:.4f} m, '
+                f'AP complete. World-frame tracking RMSE {rms:.4f} m, '
                 f'max tracking error {self.max_error:.4f} m, endpoint error {goal_error:.4f} m.'
             )
         self.publisher.publish(cmd)

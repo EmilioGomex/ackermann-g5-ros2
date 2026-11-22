@@ -28,7 +28,7 @@ ros2 launch ackermann_g5 simulation.launch.py
 ```
 
 Para grabar, inicia la simulación con 30 segundos de espera. La cuenta
-empieza cuando aparece `Odometry ready`.
+empieza cuando aparece `Gazebo pose ready`.
 
 ```bash
 ros2 launch ackermann_g5 simulation.launch.py start_delay:=30.0
@@ -36,8 +36,9 @@ ros2 launch ackermann_g5 simulation.launch.py start_delay:=30.0
 
 El robot se detiene al terminar la P. La línea `AP complete` muestra el RMSE
 de seguimiento, el error máximo y la distancia al punto final, calculados
-con la odometría de ruedas. Para ver la odometría en otra terminal,
-carga Jazzy y ejecuta `ros2 topic echo /g5/odom --once`.
+con la pose del robot en Gazebo. El nodo se detiene si se desvía más
+de 0,30 m. La odometría de ruedas sigue disponible en `/g5/odom`
+para compararla con `/g5/ground_truth`.
 
 ## Archivos
 

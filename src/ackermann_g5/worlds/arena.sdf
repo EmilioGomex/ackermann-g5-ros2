@@ -28,14 +28,14 @@
         <collision name="collision">
           <geometry>
             <box>
-              <size>7.8 5.4 0.10</size>
+              <size>14 11 0.10</size>
             </box>
           </geometry>
         </collision>
         <visual name="visual">
           <geometry>
             <box>
-              <size>7.8 5.4 0.10</size>
+              <size>14 11 0.10</size>
             </box>
           </geometry>
           <material>
