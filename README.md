@@ -42,7 +42,7 @@ para compararla con `/g5/ground_truth`.
 ## Resultado
 
 En Gazebo completamos la vuelta con 4,0 mm de RMSE, 9,7 mm de error máximo
-y 34,7 mm de distancia al punto final. Las medidas usan la pose de Gazebo.
+y 34,5 mm de distancia al punto final. Las medidas usan la pose de Gazebo.
 
 ## Archivos
 
