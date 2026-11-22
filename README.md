@@ -1,8 +1,9 @@
 # Robot Ackermann · Grupo 5
 
 Hicimos el robot en Fusion 360 y lo probamos con ROS 2 Jazzy y Gazebo
-Harmonic en una VM con Linux Mint. El robot da una vuelta de 0,75 m de radio
-con Pure Pursuit. Los puntos verdes en Gazebo marcan el recorrido.
+Harmonic en una VM con Linux Mint. La trayectoria actual dibuja AP con
+Pure Pursuit. Los puntos verdes marcan las letras y los grises las maniobras
+entre trazos.
 
 ## Instalación
 
@@ -33,13 +34,14 @@ empieza cuando aparece `Odometry ready`.
 ros2 launch ackermann_g5 simulation.launch.py start_delay:=30.0
 ```
 
-El robot se detiene después de una vuelta. La línea `Lap complete` muestra
-el RMSE radial, el error máximo y la distancia al punto de partida, todos
-calculados con la odometría de ruedas. Para ver la odometría en otra terminal,
+El robot se detiene al terminar la P. La línea `AP complete` muestra el RMSE
+de seguimiento, el error máximo y la distancia al punto final, calculados
+con la odometría de ruedas. Para ver la odometría en otra terminal,
 carga Jazzy y ejecuta `ros2 topic echo /g5/odom --once`.
 
 ## Archivos
 
-- `src/ackermann_g5/scripts/follow_circle.py` contiene el controlador.
+- `src/ackermann_g5/scripts/follow_ap.py` contiene el controlador.
 - `src/ackermann_g5/urdf/` contiene el modelo y los parámetros del robot.
+- `src/ackermann_g5/config/ap_path.csv` contiene los puntos de la trayectoria.
 - `src/ackermann_g5/worlds/arena.sdf` contiene la pista.

@@ -1,3 +1,5 @@
+import csv
+import math
 from pathlib import Path
 from shlex import quote
 
@@ -27,6 +29,12 @@ def setup(context):
         str(share / 'urdf' / 'ackermann_g5.urdf.xacro'),
         mappings={'lidar': str(slam).lower(), 'mesh_dir': str(share / 'meshes')},
     ).toxml()
+    with (share / 'config' / 'ap_path.csv').open(newline='') as file:
+        rows = csv.reader(file)
+        x, y = map(float, next(rows))
+        next_x, next_y = map(float, next(rows))
+    yaw = math.atan2(next_y - y, next_x - x)
+
     bridges = [
         '/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock',
         '/g5/cmd_vel@geometry_msgs/msg/Twist]gz.msgs.Twist',
@@ -49,7 +57,8 @@ def setup(context):
         Node(
             package='ros_gz_sim', executable='create',
             arguments=['-world', 'g5_arena', '-topic', '/robot_description',
-                       '-name', 'ackermann_g5', '-z', '0.003'],
+                       '-name', 'ackermann_g5', '-z', '0.003',
+                       '-x', str(x), '-y', str(y), '-Y', str(yaw)],
             output='screen',
         ),
         Node(
@@ -57,7 +66,7 @@ def setup(context):
             arguments=bridges, remappings=[('/g5/tf', '/tf')], output='screen',
         ),
         Node(
-            package='ackermann_g5', executable='follow_circle.py',
+            package='ackermann_g5', executable='follow_ap.py',
             condition=IfCondition(LaunchConfiguration('controller')),
             parameters=[{
                 'use_sim_time': True,
