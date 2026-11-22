@@ -1,9 +1,8 @@
 # Robot Ackermann · Grupo 5
 
-Hicimos el robot en Fusion 360 y lo probamos con ROS 2 Jazzy y Gazebo
-Harmonic en una VM con Linux Mint. La trayectoria actual dibuja AP con
-Pure Pursuit. Los puntos verdes marcan las letras y los grises las maniobras
-entre trazos.
+El robot Ackermann del Grupo 5 sigue el contorno de un paraguas en Gazebo
+Harmonic con ROS 2 Jazzy. El recorrido es cerrado y los puntos verdes
+marcan la referencia. Lo controlamos con Pure Pursuit.
 
 ## Instalación
 
@@ -34,7 +33,7 @@ empieza cuando aparece `Gazebo pose ready`.
 ros2 launch ackermann_g5 simulation.launch.py start_delay:=30.0
 ```
 
-El robot se detiene al terminar la P. La línea `AP complete` muestra el RMSE
+El robot se detiene al volver al punto de partida. La línea `Umbrella complete` muestra el RMSE
 de seguimiento, el error máximo y la distancia al punto final, calculados
 con la pose del robot en Gazebo. El nodo se detiene si se desvía más
 de 0,30 m. La odometría de ruedas sigue disponible en `/g5/odom`
@@ -42,7 +41,7 @@ para compararla con `/g5/ground_truth`.
 
 ## Archivos
 
-- `src/ackermann_g5/scripts/follow_ap.py` contiene el controlador.
+- `src/ackermann_g5/scripts/follow_path.py` contiene el controlador.
 - `src/ackermann_g5/urdf/` contiene el modelo y los parámetros del robot.
-- `src/ackermann_g5/config/ap_path.csv` contiene los puntos de la trayectoria.
+- `src/ackermann_g5/config/umbrella_path.csv` contiene los puntos de la trayectoria.
 - `src/ackermann_g5/worlds/arena.sdf` contiene la pista.

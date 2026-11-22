@@ -12,8 +12,8 @@ from nav_msgs.msg import Odometry
 from rclpy.node import Node
 from rclpy.qos import qos_profile_sensor_data
 
-LOOKAHEAD = 0.18
-MAX_CURVATURE = 4.0
+LOOKAHEAD = 0.22
+MAX_CURVATURE = 4.2
 
 
 class PathFollower:
@@ -56,13 +56,13 @@ class PathFollower:
         lateral = -math.sin(yaw) * dx + math.cos(yaw) * dy
         curvature = 2.0 * lateral / max(dx * dx + dy * dy, 1e-8)
         curvature = min(MAX_CURVATURE, max(-MAX_CURVATURE, curvature))
-        speed = min(0.23 / (1.0 + 0.24 * abs(curvature)), max(0.045, remaining))
+        speed = min(0.18 / (1.0 + 0.28 * abs(curvature)), max(0.045, remaining))
         return speed, speed * curvature, error, goal_error
 
 
 class RobotController(Node):
     def __init__(self):
-        super().__init__('ap_follower')
+        super().__init__('umbrella_follower')
         self.declare_parameter('start_delay', 5.0)
         self.delay = max(0.0, self.get_parameter('start_delay').value)
         self.publisher = self.create_publisher(Twist, '/g5/cmd_vel', 10)
@@ -70,7 +70,7 @@ class RobotController(Node):
             Odometry, '/g5/ground_truth', self.on_pose, qos_profile_sensor_data
         )
         self.timer = self.create_timer(0.05, self.update)
-        route_file = Path(get_package_share_directory('ackermann_g5')) / 'config' / 'ap_path.csv'
+        route_file = Path(get_package_share_directory('ackermann_g5')) / 'config' / 'umbrella_path.csv'
         with route_file.open(newline='') as file:
             self.follower = PathFollower([(float(x), float(y)) for x, y in csv.reader(file)])
         self.pose = None
@@ -109,7 +109,7 @@ class RobotController(Node):
         speed, turn, error, goal_error = self.follower.update(x, y, yaw)
         if error > 0.30:
             self.finished = True
-            self.get_logger().error(f'AP stopped. Path deviation: {error:.3f} m.')
+            self.get_logger().error(f'Umbrella stopped. Path deviation: {error:.3f} m.')
             self.publisher.publish(cmd)
             return
         self.samples += 1
@@ -120,7 +120,7 @@ class RobotController(Node):
             self.finished = True
             rms = math.sqrt(self.error_sq_sum / self.samples)
             self.get_logger().info(
-                f'AP complete. World-frame tracking RMSE {rms:.4f} m, '
+                f'Umbrella complete. World-frame tracking RMSE {rms:.4f} m, '
                 f'max tracking error {self.max_error:.4f} m, endpoint error {goal_error:.4f} m.'
             )
         self.publisher.publish(cmd)

@@ -18,12 +18,12 @@
     </light>
     <gui>
       <camera name="camera">
-        <pose>2.20 -0.40 6.80 0 1.32 1.5708</pose>
+        <pose>-1.8 0 8.5 0 1.36 0</pose>
       </camera>
     </gui>
     <model name="floor">
       <static>true</static>
-      <pose>2.20 1.30 -0.05 0 0 0</pose>
+      <pose>0 0 -0.05 0 0 0</pose>
       <link name="body">
         <collision name="collision">
           <geometry>
@@ -45,14 +45,14 @@
         </visual>
       </link>
     </model>
-    <model name="ap_reference">
+    <model name="umbrella_reference">
       <static>true</static>
       <link name="markers">
         <visual name="dot_0">
-          <pose>1.90000 1.15000 0.001 0 0 0</pose>
+          <pose>-0.80000 0.65000 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -61,11 +61,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_5">
-          <pose>1.77686 1.15000 0.001 0 0 0</pose>
+        <visual name="dot_4">
+          <pose>-0.70093 0.65000 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -74,11 +74,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_10">
-          <pose>1.65371 1.15000 0.001 0 0 0</pose>
+        <visual name="dot_8">
+          <pose>-0.60186 0.65000 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -87,11 +87,24 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_15">
-          <pose>1.53057 1.15000 0.001 0 0 0</pose>
+        <visual name="dot_12">
+          <pose>-0.50279 0.65000 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_16">
+          <pose>-0.40372 0.65000 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -101,10 +114,10 @@
           </material>
         </visual>
         <visual name="dot_20">
-          <pose>1.40742 1.15000 0.001 0 0 0</pose>
+          <pose>-0.30465 0.65000 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -113,11 +126,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_25">
-          <pose>1.28428 1.15000 0.001 0 0 0</pose>
+        <visual name="dot_24">
+          <pose>-0.20558 0.65000 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -126,11 +139,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_30">
-          <pose>1.16114 1.15000 0.001 0 0 0</pose>
+        <visual name="dot_28">
+          <pose>-0.10651 0.65000 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -139,11 +152,24 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_35">
-          <pose>1.03799 1.15000 0.001 0 0 0</pose>
+        <visual name="dot_32">
+          <pose>-0.00745 0.65000 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_36">
+          <pose>0.09139 0.65210 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -153,10 +179,10 @@
           </material>
         </visual>
         <visual name="dot_40">
-          <pose>0.91485 1.15000 0.001 0 0 0</pose>
+          <pose>0.18858 0.66880 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -165,11 +191,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_45">
-          <pose>0.79171 1.15000 0.001 0 0 0</pose>
+        <visual name="dot_44">
+          <pose>0.28153 0.70173 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -178,11 +204,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_50">
-          <pose>0.66970 1.14914 0.001 0 0 0</pose>
+        <visual name="dot_48">
+          <pose>0.36756 0.74993 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -191,11 +217,24 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_55">
-          <pose>0.55667 1.11942 0.001 0 0 0</pose>
+        <visual name="dot_52">
+          <pose>0.44418 0.81200 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_56">
+          <pose>0.50975 0.88604 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -205,10 +244,10 @@
           </material>
         </visual>
         <visual name="dot_60">
-          <pose>0.46184 1.05108 0.001 0 0 0</pose>
+          <pose>0.57226 0.96379 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -217,11 +256,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_65">
-          <pose>0.39788 0.95326 0.001 0 0 0</pose>
+        <visual name="dot_64">
+          <pose>0.62547 1.04237 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -230,11 +269,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_70">
-          <pose>0.34977 0.83800 0.001 0 0 0</pose>
+        <visual name="dot_68">
+          <pose>0.66516 1.12858 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -243,11 +282,24 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_75">
-          <pose>0.30166 0.72274 0.001 0 0 0</pose>
+        <visual name="dot_72">
+          <pose>0.69025 1.22010 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_76">
+          <pose>0.70009 1.31449 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -257,10 +309,10 @@
           </material>
         </visual>
         <visual name="dot_80">
-          <pose>0.25355 0.60747 0.001 0 0 0</pose>
+          <pose>0.69440 1.40922 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -269,11 +321,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_85">
-          <pose>0.20544 0.49221 0.001 0 0 0</pose>
+        <visual name="dot_84">
+          <pose>0.68040 1.50717 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -282,11 +334,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_90">
-          <pose>0.15734 0.37695 0.001 0 0 0</pose>
+        <visual name="dot_88">
+          <pose>0.66641 1.60511 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -295,11 +347,24 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_95">
-          <pose>0.10923 0.26169 0.001 0 0 0</pose>
+        <visual name="dot_92">
+          <pose>0.65242 1.70306 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_96">
+          <pose>0.64319 1.79900 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -309,10 +374,10 @@
           </material>
         </visual>
         <visual name="dot_100">
-          <pose>0.06112 0.14643 0.001 0 0 0</pose>
+          <pose>0.64932 1.89433 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -321,128 +386,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_113">
-          <pose>-0.12470 -0.09749 0.001 0 0 0</pose>
+        <visual name="dot_104">
+          <pose>0.67101 1.98736 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.014</radius>
-              <length>0.002</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.38 0.43 0.48 1</ambient>
-            <diffuse>0.38 0.43 0.48 1</diffuse>
-          </material>
-        </visual>
-        <visual name="dot_126">
-          <pose>-0.37936 -0.29542 0.001 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.014</radius>
-              <length>0.002</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.38 0.43 0.48 1</ambient>
-            <diffuse>0.38 0.43 0.48 1</diffuse>
-          </material>
-        </visual>
-        <visual name="dot_139">
-          <pose>-0.68185 -0.32358 0.001 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.014</radius>
-              <length>0.002</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.38 0.43 0.48 1</ambient>
-            <diffuse>0.38 0.43 0.48 1</diffuse>
-          </material>
-        </visual>
-        <visual name="dot_152">
-          <pose>-0.90601 -0.11541 0.001 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.014</radius>
-              <length>0.002</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.38 0.43 0.48 1</ambient>
-            <diffuse>0.38 0.43 0.48 1</diffuse>
-          </material>
-        </visual>
-        <visual name="dot_166">
-          <pose>-0.86156 0.19711 0.001 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.014</radius>
-              <length>0.002</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.38 0.43 0.48 1</ambient>
-            <diffuse>0.38 0.43 0.48 1</diffuse>
-          </material>
-        </visual>
-        <visual name="dot_180">
-          <pose>-0.63114 0.41507 0.001 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.014</radius>
-              <length>0.002</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.38 0.43 0.48 1</ambient>
-            <diffuse>0.38 0.43 0.48 1</diffuse>
-          </material>
-        </visual>
-        <visual name="dot_193">
-          <pose>-0.32095 0.42547 0.001 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.014</radius>
-              <length>0.002</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.38 0.43 0.48 1</ambient>
-            <diffuse>0.38 0.43 0.48 1</diffuse>
-          </material>
-        </visual>
-        <visual name="dot_206">
-          <pose>-0.00871 0.42544 0.001 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.014</radius>
-              <length>0.002</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.38 0.43 0.48 1</ambient>
-            <diffuse>0.38 0.43 0.48 1</diffuse>
-          </material>
-        </visual>
-        <visual name="dot_220">
-          <pose>0.24300 0.61953 0.001 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.014</radius>
-              <length>0.002</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.38 0.43 0.48 1</ambient>
-            <diffuse>0.38 0.43 0.48 1</diffuse>
-          </material>
-        </visual>
-        <visual name="dot_225">
-          <pose>0.29083 0.73452 0.001 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -451,11 +399,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_230">
-          <pose>0.33866 0.84950 0.001 0 0 0</pose>
+        <visual name="dot_108">
+          <pose>0.70069 2.07952 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -464,11 +412,401 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_235">
-          <pose>0.38649 0.96448 0.001 0 0 0</pose>
+        <visual name="dot_112">
+          <pose>0.73037 2.17169 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_116">
+          <pose>0.76005 2.26385 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_120">
+          <pose>0.78513 2.35604 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_124">
+          <pose>0.79522 2.45060 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_128">
+          <pose>0.78973 2.54555 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_133">
+          <pose>0.76421 2.65722 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_138">
+          <pose>0.73611 2.76160 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_142">
+          <pose>0.72468 2.85644 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_146">
+          <pose>0.74050 2.95066 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_150">
+          <pose>0.78227 3.03657 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_154">
+          <pose>0.84660 3.10720 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_159">
+          <pose>0.93486 3.16206 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_163">
+          <pose>1.02700 3.18597 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_167">
+          <pose>1.12213 3.18253 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_171">
+          <pose>1.21231 3.15203 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_175">
+          <pose>1.29888 3.10793 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_179">
+          <pose>1.38546 3.06382 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_183">
+          <pose>1.47202 3.01914 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_187">
+          <pose>1.55304 2.96394 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_191">
+          <pose>1.62361 2.89587 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_195">
+          <pose>1.68869 2.82150 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_199">
+          <pose>1.75377 2.74712 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_203">
+          <pose>1.81885 2.67275 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_207">
+          <pose>1.88393 2.59837 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_211">
+          <pose>1.94900 2.52399 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_215">
+          <pose>2.01408 2.44962 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_219">
+          <pose>2.07916 2.37524 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_223">
+          <pose>2.14424 2.30087 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_227">
+          <pose>2.20932 2.22649 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_231">
+          <pose>2.27311 2.15288 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_236">
+          <pose>2.33664 2.05554 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -478,10 +816,10 @@
           </material>
         </visual>
         <visual name="dot_240">
-          <pose>0.43432 1.07947 0.001 0 0 0</pose>
+          <pose>2.37546 1.96794 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -490,11 +828,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_245">
-          <pose>0.48214 1.19445 0.001 0 0 0</pose>
+        <visual name="dot_244">
+          <pose>2.41363 1.87708 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -503,11 +841,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_250">
-          <pose>0.52997 1.30943 0.001 0 0 0</pose>
+        <visual name="dot_248">
+          <pose>2.45179 1.78622 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -516,11 +854,24 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_255">
-          <pose>0.57780 1.42442 0.001 0 0 0</pose>
+        <visual name="dot_252">
+          <pose>2.48995 1.69536 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_256">
+          <pose>2.52811 1.60450 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -530,10 +881,10 @@
           </material>
         </visual>
         <visual name="dot_260">
-          <pose>0.62563 1.53940 0.001 0 0 0</pose>
+          <pose>2.56627 1.51364 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -542,11 +893,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_265">
-          <pose>0.67346 1.65438 0.001 0 0 0</pose>
+        <visual name="dot_264">
+          <pose>2.60443 1.42278 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -555,11 +906,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_270">
-          <pose>0.72129 1.76936 0.001 0 0 0</pose>
+        <visual name="dot_268">
+          <pose>2.64259 1.33192 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -568,11 +919,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_275">
-          <pose>0.76912 1.88435 0.001 0 0 0</pose>
+        <visual name="dot_272">
+          <pose>2.68075 1.24106 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -581,11 +932,24 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_280">
-          <pose>0.81695 1.99933 0.001 0 0 0</pose>
+        <visual name="dot_276">
+          <pose>2.71767 1.15205 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_281">
+          <pose>2.74672 1.04376 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -595,10 +959,10 @@
           </material>
         </visual>
         <visual name="dot_285">
-          <pose>0.86538 2.11335 0.001 0 0 0</pose>
+          <pose>2.75927 0.94860 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -607,11 +971,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_290">
-          <pose>0.93932 2.20869 0.001 0 0 0</pose>
+        <visual name="dot_289">
+          <pose>2.77165 0.85134 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -620,11 +984,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_295">
-          <pose>1.04330 2.26987 0.001 0 0 0</pose>
+        <visual name="dot_293">
+          <pose>2.78403 0.75407 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -633,11 +997,24 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_300">
-          <pose>1.16255 2.28820 0.001 0 0 0</pose>
+        <visual name="dot_297">
+          <pose>2.79641 0.65681 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_301">
+          <pose>2.80879 0.55955 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -647,10 +1024,10 @@
           </material>
         </visual>
         <visual name="dot_305">
-          <pose>1.28010 2.26107 0.001 0 0 0</pose>
+          <pose>2.82116 0.46228 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -659,11 +1036,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_310">
-          <pose>1.37926 2.19235 0.001 0 0 0</pose>
+        <visual name="dot_309">
+          <pose>2.83354 0.36502 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -672,11 +1049,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_315">
-          <pose>1.44593 2.09179 0.001 0 0 0</pose>
+        <visual name="dot_313">
+          <pose>2.84592 0.26775 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -685,11 +1062,24 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_320">
-          <pose>1.49373 1.97741 0.001 0 0 0</pose>
+        <visual name="dot_317">
+          <pose>2.85830 0.17049 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_321">
+          <pose>2.87068 0.07323 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -699,10 +1089,10 @@
           </material>
         </visual>
         <visual name="dot_325">
-          <pose>1.54152 1.86302 0.001 0 0 0</pose>
+          <pose>2.87481 -0.02447 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -711,11 +1101,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_330">
-          <pose>1.58932 1.74864 0.001 0 0 0</pose>
+        <visual name="dot_329">
+          <pose>2.86449 -0.12186 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -724,11 +1114,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_335">
-          <pose>1.63712 1.63425 0.001 0 0 0</pose>
+        <visual name="dot_333">
+          <pose>2.85211 -0.21912 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -737,11 +1127,24 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_340">
-          <pose>1.68491 1.51987 0.001 0 0 0</pose>
+        <visual name="dot_337">
+          <pose>2.83973 -0.31639 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_341">
+          <pose>2.82735 -0.41365 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -751,10 +1154,10 @@
           </material>
         </visual>
         <visual name="dot_345">
-          <pose>1.73271 1.40548 0.001 0 0 0</pose>
+          <pose>2.81497 -0.51091 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -763,11 +1166,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_350">
-          <pose>1.78051 1.29110 0.001 0 0 0</pose>
+        <visual name="dot_349">
+          <pose>2.80260 -0.60818 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -776,11 +1179,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_355">
-          <pose>1.82830 1.17671 0.001 0 0 0</pose>
+        <visual name="dot_353">
+          <pose>2.79022 -0.70544 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -789,11 +1192,24 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_360">
-          <pose>1.87610 1.06233 0.001 0 0 0</pose>
+        <visual name="dot_357">
+          <pose>2.77784 -0.80270 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_361">
+          <pose>2.76546 -0.89997 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -803,10 +1219,10 @@
           </material>
         </visual>
         <visual name="dot_365">
-          <pose>1.92390 0.94794 0.001 0 0 0</pose>
+          <pose>2.75308 -0.99723 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -816,10 +1232,10 @@
           </material>
         </visual>
         <visual name="dot_370">
-          <pose>1.97169 0.83355 0.001 0 0 0</pose>
+          <pose>2.73180 -1.10943 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -829,10 +1245,10 @@
           </material>
         </visual>
         <visual name="dot_375">
-          <pose>2.01949 0.71917 0.001 0 0 0</pose>
+          <pose>2.69030 -1.21835 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -841,11 +1257,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_380">
-          <pose>2.06729 0.60478 0.001 0 0 0</pose>
+        <visual name="dot_379">
+          <pose>2.65213 -1.30921 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -854,11 +1270,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_385">
-          <pose>2.11508 0.49040 0.001 0 0 0</pose>
+        <visual name="dot_383">
+          <pose>2.61397 -1.40007 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -867,11 +1283,24 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_390">
-          <pose>2.16288 0.37601 0.001 0 0 0</pose>
+        <visual name="dot_387">
+          <pose>2.57581 -1.49093 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_391">
+          <pose>2.53765 -1.58179 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -881,10 +1310,10 @@
           </material>
         </visual>
         <visual name="dot_395">
-          <pose>2.21068 0.26163 0.001 0 0 0</pose>
+          <pose>2.49949 -1.67265 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -893,11 +1322,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_400">
-          <pose>2.25847 0.14724 0.001 0 0 0</pose>
+        <visual name="dot_399">
+          <pose>2.46133 -1.76351 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -906,11 +1335,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_405">
-          <pose>2.30869 0.03623 0.001 0 0 0</pose>
+        <visual name="dot_403">
+          <pose>2.42317 -1.85437 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -919,11 +1348,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_410">
-          <pose>2.38759 -0.05187 0.001 0 0 0</pose>
+        <visual name="dot_407">
+          <pose>2.38500 -1.94523 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -932,76 +1361,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_423">
-          <pose>2.64409 -0.24872 0.001 0 0 0</pose>
+        <visual name="dot_411">
+          <pose>2.34694 -2.03466 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.014</radius>
-              <length>0.002</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.38 0.43 0.48 1</ambient>
-            <diffuse>0.38 0.43 0.48 1</diffuse>
-          </material>
-        </visual>
-        <visual name="dot_437">
-          <pose>2.95742 -0.33000 0.001 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.014</radius>
-              <length>0.002</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.38 0.43 0.48 1</ambient>
-            <diffuse>0.38 0.43 0.48 1</diffuse>
-          </material>
-        </visual>
-        <visual name="dot_450">
-          <pose>3.27844 -0.33000 0.001 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.014</radius>
-              <length>0.002</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.38 0.43 0.48 1</ambient>
-            <diffuse>0.38 0.43 0.48 1</diffuse>
-          </material>
-        </visual>
-        <visual name="dot_463">
-          <pose>3.54561 -0.19183 0.001 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.014</radius>
-              <length>0.002</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.38 0.43 0.48 1</ambient>
-            <diffuse>0.38 0.43 0.48 1</diffuse>
-          </material>
-        </visual>
-        <visual name="dot_477">
-          <pose>3.71652 0.07667 0.001 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.014</radius>
-              <length>0.002</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.38 0.43 0.48 1</ambient>
-            <diffuse>0.38 0.43 0.48 1</diffuse>
-          </material>
-        </visual>
-        <visual name="dot_482">
-          <pose>3.72000 0.19828 0.001 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1010,11 +1374,245 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_487">
-          <pose>3.72000 0.32255 0.001 0 0 0</pose>
+        <visual name="dot_416">
+          <pose>2.28736 -2.13447 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_420">
+          <pose>2.22559 -2.20790 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_424">
+          <pose>2.16051 -2.28227 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_428">
+          <pose>2.09543 -2.35665 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_432">
+          <pose>2.03035 -2.43102 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_436">
+          <pose>1.96527 -2.50540 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_440">
+          <pose>1.90020 -2.57978 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_444">
+          <pose>1.83512 -2.65415 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_448">
+          <pose>1.77004 -2.72853 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_452">
+          <pose>1.70496 -2.80290 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_456">
+          <pose>1.63988 -2.87728 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_460">
+          <pose>1.57175 -2.94806 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_464">
+          <pose>1.49313 -3.00664 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_468">
+          <pose>1.40711 -3.05280 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_472">
+          <pose>1.32053 -3.09690 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_476">
+          <pose>1.23395 -3.14101 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_480">
+          <pose>1.14545 -3.17738 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_484">
+          <pose>1.05081 -3.18770 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_488">
+          <pose>0.95718 -3.17053 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1024,10 +1622,10 @@
           </material>
         </visual>
         <visual name="dot_492">
-          <pose>3.72000 0.44682 0.001 0 0 0</pose>
+          <pose>0.87237 -3.12730 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1037,10 +1635,10 @@
           </material>
         </visual>
         <visual name="dot_497">
-          <pose>3.72000 0.57109 0.001 0 0 0</pose>
+          <pose>0.79641 -3.05591 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1049,11 +1647,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_502">
-          <pose>3.72000 0.69536 0.001 0 0 0</pose>
+        <visual name="dot_501">
+          <pose>0.74861 -2.97320 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1062,11 +1660,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_507">
-          <pose>3.72000 0.81963 0.001 0 0 0</pose>
+        <visual name="dot_505">
+          <pose>0.72610 -2.88036 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1075,11 +1673,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_512">
-          <pose>3.72000 0.94390 0.001 0 0 0</pose>
+        <visual name="dot_509">
+          <pose>0.73071 -2.78494 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1088,11 +1686,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_517">
-          <pose>3.72000 1.06817 0.001 0 0 0</pose>
+        <visual name="dot_514">
+          <pose>0.75859 -2.67809 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1101,11 +1699,24 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_522">
-          <pose>3.72000 1.19244 0.001 0 0 0</pose>
+        <visual name="dot_519">
+          <pose>0.78593 -2.56904 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_523">
+          <pose>0.79531 -2.47440 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1115,10 +1726,10 @@
           </material>
         </visual>
         <visual name="dot_527">
-          <pose>3.72000 1.31671 0.001 0 0 0</pose>
+          <pose>0.78911 -2.37950 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1127,11 +1738,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_532">
-          <pose>3.72000 1.44098 0.001 0 0 0</pose>
+        <visual name="dot_531">
+          <pose>0.76747 -2.28689 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1140,11 +1751,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_537">
-          <pose>3.72000 1.56525 0.001 0 0 0</pose>
+        <visual name="dot_535">
+          <pose>0.73779 -2.19473 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1153,11 +1764,24 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_542">
-          <pose>3.72000 1.68952 0.001 0 0 0</pose>
+        <visual name="dot_539">
+          <pose>0.70811 -2.10256 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_543">
+          <pose>0.67843 -2.01040 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1167,10 +1791,10 @@
           </material>
         </visual>
         <visual name="dot_547">
-          <pose>3.72000 1.81379 0.001 0 0 0</pose>
+          <pose>0.65330 -1.91790 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1179,11 +1803,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_552">
-          <pose>3.72000 1.93806 0.001 0 0 0</pose>
+        <visual name="dot_551">
+          <pose>0.64325 -1.82290 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1192,11 +1816,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_557">
-          <pose>3.72000 2.06233 0.001 0 0 0</pose>
+        <visual name="dot_555">
+          <pose>0.64892 -1.72755 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1205,11 +1829,24 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_562">
-          <pose>3.72000 2.18660 0.001 0 0 0</pose>
+        <visual name="dot_559">
+          <pose>0.66291 -1.62960 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_563">
+          <pose>0.67691 -1.53165 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1219,10 +1856,10 @@
           </material>
         </visual>
         <visual name="dot_567">
-          <pose>3.72000 2.31088 0.001 0 0 0</pose>
+          <pose>0.69090 -1.43371 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1231,11 +1868,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_572">
-          <pose>3.72000 2.43515 0.001 0 0 0</pose>
+        <visual name="dot_571">
+          <pose>0.70012 -1.33824 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1244,11 +1881,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_577">
-          <pose>3.73422 2.55432 0.001 0 0 0</pose>
+        <visual name="dot_575">
+          <pose>0.69416 -1.24353 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1257,11 +1894,24 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_582">
-          <pose>3.78981 2.65952 0.001 0 0 0</pose>
+        <visual name="dot_579">
+          <pose>0.67283 -1.15105 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_583">
+          <pose>0.63671 -1.06330 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1271,10 +1921,10 @@
           </material>
         </visual>
         <visual name="dot_587">
-          <pose>3.88000 2.73713 0.001 0 0 0</pose>
+          <pose>0.58676 -0.98260 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1283,11 +1933,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_592">
-          <pose>3.99231 2.77643 0.001 0 0 0</pose>
+        <visual name="dot_591">
+          <pose>0.52538 -0.90548 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1296,11 +1946,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_597">
-          <pose>4.11341 2.78000 0.001 0 0 0</pose>
+        <visual name="dot_595">
+          <pose>0.46160 -0.82949 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1309,11 +1959,24 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_602">
-          <pose>4.23576 2.78000 0.001 0 0 0</pose>
+        <visual name="dot_599">
+          <pose>0.38769 -0.76421 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_603">
+          <pose>0.30379 -0.71240 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1323,10 +1986,10 @@
           </material>
         </visual>
         <visual name="dot_607">
-          <pose>4.35811 2.78000 0.001 0 0 0</pose>
+          <pose>0.21232 -0.67554 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1335,11 +1998,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_612">
-          <pose>4.48046 2.78000 0.001 0 0 0</pose>
+        <visual name="dot_611">
+          <pose>0.11593 -0.65472 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1348,11 +2011,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_617">
-          <pose>4.60281 2.78000 0.001 0 0 0</pose>
+        <visual name="dot_615">
+          <pose>0.01742 -0.65000 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1361,11 +2024,24 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_622">
-          <pose>4.72516 2.78000 0.001 0 0 0</pose>
+        <visual name="dot_619">
+          <pose>-0.08126 -0.65000 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_623">
+          <pose>-0.17993 -0.65000 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1375,10 +2051,10 @@
           </material>
         </visual>
         <visual name="dot_627">
-          <pose>4.84343 2.77240 0.001 0 0 0</pose>
+          <pose>-0.27861 -0.65000 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1387,11 +2063,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_632">
-          <pose>4.95009 2.72725 0.001 0 0 0</pose>
+        <visual name="dot_631">
+          <pose>-0.37728 -0.65000 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1400,11 +2076,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_637">
-          <pose>5.04754 2.66308 0.001 0 0 0</pose>
+        <visual name="dot_635">
+          <pose>-0.47596 -0.65000 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1413,11 +2089,24 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_642">
-          <pose>5.14499 2.59891 0.001 0 0 0</pose>
+        <visual name="dot_639">
+          <pose>-0.57463 -0.65000 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_643">
+          <pose>-0.67331 -0.65000 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1427,10 +2116,10 @@
           </material>
         </visual>
         <visual name="dot_647">
-          <pose>5.24025 2.52609 0.001 0 0 0</pose>
+          <pose>-0.77198 -0.65000 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1439,11 +2128,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_652">
-          <pose>5.30571 2.42324 0.001 0 0 0</pose>
+        <visual name="dot_651">
+          <pose>-0.87066 -0.65000 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1452,11 +2141,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_657">
-          <pose>5.34018 2.31441 0.001 0 0 0</pose>
+        <visual name="dot_655">
+          <pose>-0.96933 -0.65000 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1465,11 +2154,24 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_662">
-          <pose>5.37280 2.20526 0.001 0 0 0</pose>
+        <visual name="dot_659">
+          <pose>-1.06801 -0.65000 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_663">
+          <pose>-1.16669 -0.65000 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1479,10 +2181,10 @@
           </material>
         </visual>
         <visual name="dot_667">
-          <pose>5.37677 2.08461 0.001 0 0 0</pose>
+          <pose>-1.26536 -0.65000 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1491,11 +2193,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_672">
-          <pose>5.33909 1.96951 0.001 0 0 0</pose>
+        <visual name="dot_671">
+          <pose>-1.36315 -0.65049 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1504,11 +2206,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_677">
-          <pose>5.29351 1.85691 0.001 0 0 0</pose>
+        <visual name="dot_675">
+          <pose>-1.45747 -0.66215 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1517,11 +2219,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_682">
-          <pose>5.24549 1.74739 0.001 0 0 0</pose>
+        <visual name="dot_679">
+          <pose>-1.54863 -0.68906 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1530,11 +2232,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_687">
-          <pose>5.16931 1.65942 0.001 0 0 0</pose>
+        <visual name="dot_684">
+          <pose>-1.65328 -0.73403 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1543,11 +2245,24 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_692">
-          <pose>5.07502 1.59373 0.001 0 0 0</pose>
+        <visual name="dot_689">
+          <pose>-1.75914 -0.78545 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_693">
+          <pose>-1.83700 -0.84306 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1557,10 +2272,10 @@
           </material>
         </visual>
         <visual name="dot_697">
-          <pose>4.98066 1.52903 0.001 0 0 0</pose>
+          <pose>-1.90319 -0.91379 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1569,11 +2284,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_702">
-          <pose>4.87555 1.47434 0.001 0 0 0</pose>
+        <visual name="dot_701">
+          <pose>-1.95552 -0.99530 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1582,11 +2297,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_707">
-          <pose>4.75615 1.46000 0.001 0 0 0</pose>
+        <visual name="dot_705">
+          <pose>-1.99228 -1.08491 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1595,11 +2310,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_712">
-          <pose>4.63280 1.46000 0.001 0 0 0</pose>
+        <visual name="dot_710">
+          <pose>-2.02119 -1.18580 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1608,11 +2323,24 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_717">
-          <pose>4.50945 1.46000 0.001 0 0 0</pose>
+        <visual name="dot_714">
+          <pose>-2.03348 -1.28091 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_718">
+          <pose>-2.02950 -1.37673 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1622,10 +2350,10 @@
           </material>
         </visual>
         <visual name="dot_722">
-          <pose>4.38610 1.46000 0.001 0 0 0</pose>
+          <pose>-2.00936 -1.47049 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1634,11 +2362,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_727">
-          <pose>4.26275 1.46000 0.001 0 0 0</pose>
+        <visual name="dot_726">
+          <pose>-1.97365 -1.55950 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1647,11 +2375,11 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_732">
-          <pose>4.13940 1.46000 0.001 0 0 0</pose>
+        <visual name="dot_730">
+          <pose>-1.92549 -1.64275 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1660,11 +2388,24 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_737">
-          <pose>4.01604 1.46000 0.001 0 0 0</pose>
+        <visual name="dot_734">
+          <pose>-1.86547 -1.71775 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_738">
+          <pose>-1.79390 -1.78181 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1674,10 +2415,10 @@
           </material>
         </visual>
         <visual name="dot_742">
-          <pose>3.89269 1.46000 0.001 0 0 0</pose>
+          <pose>-1.71274 -1.83319 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>
@@ -1686,11 +2427,947 @@
             <diffuse>0.06 0.78 0.20 1</diffuse>
           </material>
         </visual>
-        <visual name="dot_747">
-          <pose>3.76934 1.46000 0.001 0 0 0</pose>
+        <visual name="dot_746">
+          <pose>-1.62421 -1.87046 0.001 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.027</radius>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_750">
+          <pose>-1.53510 -1.90168 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_754">
+          <pose>-1.44957 -1.94645 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_758">
+          <pose>-1.37265 -2.00479 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_762">
+          <pose>-1.30648 -2.07508 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_766">
+          <pose>-1.25288 -2.15537 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_771">
+          <pose>-1.20540 -2.26203 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_775">
+          <pose>-1.18613 -2.35701 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_779">
+          <pose>-1.18714 -2.45392 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_783">
+          <pose>-1.20841 -2.54848 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_787">
+          <pose>-1.24898 -2.63650 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_792">
+          <pose>-1.30524 -2.72067 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_796">
+          <pose>-1.37439 -2.79150 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_800">
+          <pose>-1.45562 -2.84809 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_804">
+          <pose>-1.54602 -2.88842 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_808">
+          <pose>-1.64238 -2.91105 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_813">
+          <pose>-1.75596 -2.92178 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_818">
+          <pose>-1.87240 -2.92450 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_822">
+          <pose>-1.96548 -2.90997 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_826">
+          <pose>-2.05498 -2.88056 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_830">
+          <pose>-2.13972 -2.83692 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_834">
+          <pose>-2.22527 -2.78786 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_838">
+          <pose>-2.31082 -2.73880 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_842">
+          <pose>-2.39636 -2.68973 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_846">
+          <pose>-2.48191 -2.64067 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_850">
+          <pose>-2.55945 -2.58740 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_854">
+          <pose>-2.62736 -2.52230 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_858">
+          <pose>-2.68385 -2.44708 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_862">
+          <pose>-2.72848 -2.36263 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_866">
+          <pose>-2.77113 -2.27232 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_870">
+          <pose>-2.81377 -2.18201 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_874">
+          <pose>-2.85642 -2.09170 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_878">
+          <pose>-2.89906 -2.00139 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_882">
+          <pose>-2.93970 -1.91033 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_886">
+          <pose>-2.96619 -1.81441 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_890">
+          <pose>-2.97588 -1.71537 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_894">
+          <pose>-2.97333 -1.61642 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_898">
+          <pose>-2.97024 -1.51770 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_902">
+          <pose>-2.96716 -1.41899 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_906">
+          <pose>-2.96407 -1.32027 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_910">
+          <pose>-2.96099 -1.22155 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_914">
+          <pose>-2.95790 -1.12283 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_918">
+          <pose>-2.95482 -1.02412 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_922">
+          <pose>-2.95001 -0.92880 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_927">
+          <pose>-2.92603 -0.81631 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_931">
+          <pose>-2.89160 -0.72745 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_935">
+          <pose>-2.85427 -0.63631 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_939">
+          <pose>-2.81694 -0.54518 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_943">
+          <pose>-2.77961 -0.45404 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_947">
+          <pose>-2.74228 -0.36291 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_951">
+          <pose>-2.70494 -0.27177 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_955">
+          <pose>-2.66761 -0.18064 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_960">
+          <pose>-2.61724 -0.07654 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_965">
+          <pose>-2.54890 0.01444 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_969">
+          <pose>-2.48029 0.08076 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_973">
+          <pose>-2.40730 0.14872 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_977">
+          <pose>-2.33432 0.21667 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_981">
+          <pose>-2.26133 0.28462 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_985">
+          <pose>-2.18834 0.35258 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_989">
+          <pose>-2.11636 0.41897 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_994">
+          <pose>-2.02168 0.48515 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_999">
+          <pose>-1.91578 0.53125 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_1003">
+          <pose>-1.82345 0.55738 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_1007">
+          <pose>-1.72989 0.58336 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_1011">
+          <pose>-1.63634 0.60935 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_1015">
+          <pose>-1.54443 0.63443 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_1020">
+          <pose>-1.43339 0.64957 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_1024">
+          <pose>-1.33763 0.65000 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_1028">
+          <pose>-1.23988 0.65000 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_1032">
+          <pose>-1.14213 0.65000 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_1036">
+          <pose>-1.04438 0.65000 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_1040">
+          <pose>-0.94663 0.65000 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.06 0.78 0.20 1</ambient>
+            <diffuse>0.06 0.78 0.20 1</diffuse>
+          </material>
+        </visual>
+        <visual name="dot_1044">
+          <pose>-0.84888 0.65000 0.001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.032</radius>
               <length>0.002</length>
             </cylinder>
           </geometry>

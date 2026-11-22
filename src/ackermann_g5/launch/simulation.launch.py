@@ -29,7 +29,7 @@ def setup(context):
         str(share / 'urdf' / 'ackermann_g5.urdf.xacro'),
         mappings={'lidar': str(slam).lower(), 'mesh_dir': str(share / 'meshes')},
     ).toxml()
-    with (share / 'config' / 'ap_path.csv').open(newline='') as file:
+    with (share / 'config' / 'umbrella_path.csv').open(newline='') as file:
         rows = csv.reader(file)
         x, y = map(float, next(rows))
         next_x, next_y = map(float, next(rows))
@@ -67,7 +67,7 @@ def setup(context):
             arguments=bridges, remappings=[('/g5/tf', '/tf')], output='screen',
         ),
         Node(
-            package='ackermann_g5', executable='follow_ap.py',
+            package='ackermann_g5', executable='follow_path.py',
             condition=IfCondition(LaunchConfiguration('controller')),
             parameters=[{
                 'use_sim_time': True,
