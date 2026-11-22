@@ -38,25 +38,6 @@ el RMSE radial, el error máximo y la distancia al punto de partida, todos
 calculados con la odometría de ruedas. Para ver la odometría en otra terminal,
 carga Jazzy y ejecuta `ros2 topic echo /g5/odom --once`.
 
-## LiDAR y SLAM
-
-El modo de mapeo usa un LiDAR 2D virtual y SLAM Toolbox. Instala estos paquetes
-si vas a probarlo:
-
-```bash
-sudo apt install ros-jazzy-slam-toolbox ros-jazzy-nav2-map-server ros-jazzy-rviz2
-ros2 launch ackermann_g5 simulation.launch.py slam:=true
-```
-
-En otra terminal con Jazzy cargado, abre RViz con
-`rviz2 --ros-args -p use_sim_time:=true`. Selecciona `map` como marco fijo y
-agrega `/map` y `/g5/scan`. Para el escaneo usa fiabilidad *Best Effort*.
-Para guardar el mapa:
-
-```bash
-ros2 run nav2_map_server map_saver_cli -f g5_map --ros-args -p use_sim_time:=true
-```
-
 ## Archivos
 
 - `src/ackermann_g5/scripts/follow_circle.py` contiene el controlador.
